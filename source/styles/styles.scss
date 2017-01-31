@@ -34,7 +34,7 @@
     }
 
     &-messages {
-        height: 250px;
+        height: 240px;
         font-size: 14px;
         overflow-y: scroll;
 
@@ -54,12 +54,24 @@
     &-message {
         position: relative;
         border-top: 1px solid #ccc;
+
+        &-mine {
+            + .live-chat-message-mine {
+                margin-top: 1px;
+            }
+        }
+
+        &-their {
+            + .live-chat-message-their {
+                margin-top: 1px;
+            }
+        }
     }
 
     &-message-input {
         display: inline-block;
         width: calc(100% - 45px);
-        height: 29px;
+        height: 34px;
     }
 
     &-message-input-item {
@@ -71,7 +83,7 @@
 
     &-message-send {
         position: absolute;
-        top: 2px;
+        top: 5px;
         right: 5px;
         width: 40px;
         padding: 5px;
@@ -88,6 +100,7 @@
 
     &-message-inner {
         display: inline-block;
+        min-width: 50px;
         max-width: 90%;
         padding: 5px;
         border-radius: 5px;
@@ -97,13 +110,14 @@
     &-message-mine {
         .live-chat-message-inner {
             float: right;
-            background-color: #025f8e;
+            background-color: #4080ff;
         }
     }
 
     &-message-their {
         .live-chat-message-inner {
-            background-color: #999;
+            background-color: #ddd;
+            color: #000;
         }
     }
 

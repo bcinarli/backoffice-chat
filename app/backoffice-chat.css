@@ -34,7 +34,7 @@
 }
 
 .live-chat-messages {
-  height: 250px;
+  height: 240px;
   font-size: 14px;
   overflow-y: scroll;
 }
@@ -56,10 +56,18 @@
   border-top: 1px solid #ccc;
 }
 
+.live-chat-message-mine + .live-chat-message-mine {
+  margin-top: 1px;
+}
+
+.live-chat-message-their + .live-chat-message-their {
+  margin-top: 1px;
+}
+
 .live-chat-message-input {
   display: inline-block;
   width: calc(100% - 45px);
-  height: 29px;
+  height: 34px;
 }
 
 .live-chat-message-input-item.live-chat-message-input-item {
@@ -69,7 +77,7 @@
 
 .live-chat-message-send {
   position: absolute;
-  top: 2px;
+  top: 5px;
   right: 5px;
   width: 40px;
   padding: 5px;
@@ -86,6 +94,7 @@
 
 .live-chat-message-inner {
   display: inline-block;
+  min-width: 50px;
   max-width: 90%;
   padding: 5px;
   border-radius: 5px;
@@ -94,11 +103,12 @@
 
 .live-chat-message-mine .live-chat-message-inner {
   float: right;
-  background-color: #025f8e;
+  background-color: #4080ff;
 }
 
 .live-chat-message-their .live-chat-message-inner {
-  background-color: #999;
+  background-color: #ddd;
+  color: #000;
 }
 
 .live-chat-message-warning .live-chat-message-inner {
