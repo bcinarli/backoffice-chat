@@ -50,6 +50,7 @@ const devConfig = {
         new StyleLintPlugin(),
         new webpack.DefinePlugin({
             '__DEV__':     true,
+            '__URL__':     JSON.stringify('//localhost:8090'),
             'process.env': {
                 'NODE_ENV': JSON.stringify('development')
             }

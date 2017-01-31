@@ -25,7 +25,7 @@ class LiveChat {
     }
 
     initializeSocket() {
-        this.socket = window.io('//localhost:8090');
+        this.socket = window.io(__URL__);
 
         if(this.options.connection === 'client') {
             this.screen = new ClientScreen({socket: this.socket, screenID: this.screenID});

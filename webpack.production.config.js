@@ -41,6 +41,7 @@ const prodConfig = {
         new webpack.DefinePlugin({
             '__DEV__':     false,
             '__PROD__':    true,
+            '__URL__':     JSON.stringify('//young-cove-80904.herokuapp.com/'),
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
