@@ -52,6 +52,7 @@ class ClientScreen {
             : this.wrapper.classList.add('live-chat-toggled');
 
         this.unread.innerHTML = '';
+        this.unread.classList.remove('live-chat-has-unread');
     }
 
     sendMessage() {

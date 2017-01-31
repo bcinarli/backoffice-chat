@@ -39,7 +39,7 @@ class Chat {
             let msg = this.message(message, messageClass);
 
             this.messages.appendChild(msg);
-            this.messages.scrollTop = this.messages.scrollHeight;
+            this.messages.parentNode.scrollTop = this.messages.parentNode.scrollHeight;
         }
     }
 
@@ -49,6 +49,7 @@ class Chat {
         let msg = this.message(message, messageClass);
 
         this.messages.appendChild(msg);
+        this.messages.parentNode.scrollTop = this.messages.parentNode.scrollHeight;
     }
 
     message(msg, client) {
