@@ -32,7 +32,7 @@ class Resources {
 
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = path + '/live-chat.css';
+        link.href = path + '/backoffice-chat.css';
 
         document.getElementsByTagName('head')[0].appendChild(link);
     }
