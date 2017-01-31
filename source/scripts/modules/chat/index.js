@@ -39,6 +39,7 @@ class Chat {
             let msg = this.message(message, messageClass);
 
             this.messages.appendChild(msg);
+            this.messages.scrollTop = this.messages.scrollHeight;
         }
     }
 
