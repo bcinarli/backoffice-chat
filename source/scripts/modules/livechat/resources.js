@@ -9,25 +9,30 @@ class Resources {
     }
 
     static addSocket() {
-        let io  = document.createElement('script'),
-            lcs = document.getElementById('liveChat-script');
+        let io   = document.createElement('script'),
+            lcs  = document.getElementById('liveChat-script'),
+            path = '//young-cove-80904.herokuapp.com/';
 
-        io.src = '//localhost:8090/socket.io/socket.io.js';
+        if(__DEV__) {
+            path = '//localhost:8090/';
+        }
+
+        io.src = path + 'socket.io/socket.io.js';
 
         lcs.parentNode.insertBefore(io, lcs);
     }
 
     static addStyles() {
-        let link = document.createElement('link');
-        let port = '8090';
+        let link = document.createElement('link'),
+            path = '//young-cove-80904.herokuapp.com/';
 
         if(__DEV__) {
-            port = '8081';
+            path = '//localhost:8090/';
         }
 
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = '//localhost:' + port + '/live-chat.css';
+        link.href = path + '/live-chat.css';
 
         document.getElementsByTagName('head')[0].appendChild(link);
     }
