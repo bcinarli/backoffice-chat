@@ -33,6 +33,13 @@
   cursor: pointer;
 }
 
+.live-chat-toggled .live-chat-toggle::after {
+  position: absolute;
+  right: 5px;
+  line-height: 28px;
+  content: "-";
+}
+
 .live-chat-messages {
   height: 240px;
   font-size: 14px;
