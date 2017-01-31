@@ -1,16 +1,20 @@
 {
-  "name": "live-chat",
+  "name": "backoffice-chat",
   "version": "0.1.0",
   "description": "Simple chat server and live-chat plugin for web pages",
-  "main": "source/server.js",
+  "main": "index.js",
   "scripts": {
-    "server": "node index.js",
-    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --progress --colors --inline --env development\"",
+    "start": "node index.js",
+    "dev": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --progress --colors --inline --env development\"",
     "build:dev": "webpack --config webpack.config.js --progress --colors",
     "build:prod": "webpack --config webpack.production.config.js --progress --colors",
     "lint:styles": "stylelint './source/styles/**/*.scss' --syntax scss",
     "lint:scripts": "eslint --fix './source/scripts/**/*.js'"
   },
+  "repository": {
+  	  "type": "git",
+  	  "url": "https://github.com/bcinarli/backoffice-chat.git"
+    },
   "author": "Bilal Cinarli <bcinarli@gmail.com> (http://bcinarli.com)",
   "license": "MIT",
   "devDependencies": {
