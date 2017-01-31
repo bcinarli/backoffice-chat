@@ -59,6 +59,14 @@ class ClientScreen {
 
     addMessage(data, mine = false) {
         this.chat.addMessage(data, mine, this.screenID);
+
+        let wrapper = document.querySelector('.live-chat-wrapper'),
+            unread  = document.querySelector('.live-chat-unread');
+
+        if(!wrapper.classList.contains('live-chat-toggled')) {
+            unread.innerHTML = (unread.innerHTML * 1) + 1;
+            unread.classList.add('live-chat-has-unread');
+        }
     }
 }
 
