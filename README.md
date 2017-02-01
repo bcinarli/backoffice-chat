@@ -58,4 +58,4 @@ Add the following script right after the opening of `body` tag on your website's
 ```
 
 ### Notes
-When there are no active chat sessions, Agent's will see a blank page :)
+When there are no active chat sessions, agents will see a blank page :)
